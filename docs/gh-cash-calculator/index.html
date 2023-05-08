@@ -5,6 +5,74 @@
 
     <script>
       console.log("Loaded! 🎉");
+
+      console.log(`PRACTICAL PROJECT:`);
+      console.log(`Growth Hormone Cash Pay Estimator`);
+
+      console.log();
+
+      // Patient Information
+      console.log(`PATIENT INFORMATION`);
+      var patientName = `NaomiPan`.toLowerCase();
+      console.log(`Name: ${patientName}`);
+
+      // Patient Weight in Kilograms for medical records
+      var patientWeightInKilos = 19;
+      var PWIK = patientWeightInKilos;
+
+      var PWIK = patientWeightInKilos.toFixed(2).replace(/[.,]00$/, "");
+
+      // Convert patient weight from kg to lb, more human readable
+      var patientWeightInPounds = PWIK * 2.2;
+      var PWIP = patientWeightInPounds.toFixed(2).replace(/[.,]00$/, "");
+
+      console.log(`Weight in Kilograms: ${PWIK} kg (${PWIP} lbs)`);
+
+      console.log();
+
+      // Medication Cash Estimate per day, per week, per year
+
+      var medication = `Growth Hormone`;
+
+      console.log(`ESTIMATED DOSAGE`);
+      console.log(`Medication: ${medication}`);
+
+      // 40 micrograms of medication per kilogram of weight
+      var dosage = 40;
+      console.log(`Starting Dosage: ${dosage} mcg (micrograms) per kg`);
+
+      // .04 40 micro grams(mcg) of growth hormone, estimated starting dose of growth hormone
+
+      // Weight * Starting Dose = Daily Dose
+      // Convert 40 mcg to to mg = divide by 1000
+      // Example: 20kg * (40 / 1000)
+      var dailyDose = PWIK * (dosage / 1000);
+      var formattedDailyDose = dailyDose.toFixed(1).replace(/[.,]0$/, "");
+      console.log(`Daily Dose: ${formattedDailyDose} mg (milligrams)`);
+
+      // CASH COST ESTIMATE
+      // Daily Dose * 21 dollars = cost per day
+      // Cost per day * 30 = cost per month
+      // cost per day * 365 = cost per year
+
+      let costPerDay = dailyDose * 21;
+      let costPerMonth = costPerDay * 30;
+      let costPerYear = costPerDay * 365;
+
+      var formattedCostPerDay = costPerDay.toFixed(2).replace(/[.,]00$/, "");
+      var formattedCostPerMonth = costPerMonth
+        .toFixed(2)
+        .replace(/[.,]00$/, "");
+      var formattedCostPerYear = costPerYear.toFixed(2).replace(/[.,]$00/, "");
+
+      console.log();
+      console.log(`CASH COST ESTIMATES`);
+      console.log(`Cost per Day: $${formattedCostPerDay}`);
+      console.log(`Cost per Month: $${formattedCostPerMonth}`);
+      console.log(`Cost per Year: $${formattedCostPerYear}`);
+
+      console.log();
+      console.log(`love you, wife! ❤️ 5/6/23`);
     </script>
   </body>
 </html>
